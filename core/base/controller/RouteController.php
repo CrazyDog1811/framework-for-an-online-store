@@ -7,16 +7,11 @@ use core\base\exceptions\RouteException;
 use core\base\settings\Settings;
 use core\base\settings\ShopSettings;
 
-class RouteController {
+class RouteController extends BaseController {
     
     static private $_instance;
 
     protected $routes; // свойство для принятия маршрутов
-
-    protected $controller;
-    protected $inputMethod; // свойство, хранящее метод, собирающий данные из БД
-    protected $outputMethod; // свойство, хранящее метод, подключающий виды
-    protected $parameters;
 
     private function __clone() {
 
@@ -45,10 +40,12 @@ class RouteController {
 
             if (!$this->routes) throw new RouteException('the site is under maintenance');
 
-            //если после корня в пути прописан алиас админа
-            if (strpos($address_str, $this->routes['admin']['alias']) === strlen(PATH)) {
+            $url = explode('/', substr($address_str, strlen(PATH))); // разделить адресную строку на массив строк, разделённых слэшем, начиная после слэша из константы PATH
 
-                $url = explode('/', substr($address_str, strlen(PATH . $this->routes['admin']['alias']) + 1));
+            //если после корня в пути прописан алиас админа
+            if ($url[0] && $url[0] === $this->routes['admin']['alias']) {
+
+                array_shift($url); // удалить из $url нулевой элемент
 
                 // если есть что либо в массиве и существует директория с таким именем.Если да, то это плагин
                 if ($url[0] && is_dir($_SERVER['DOCUMENT_ROOT'] . PATH . $this->routes['plugins']['path'] . $url[0])) {
@@ -90,7 +87,7 @@ class RouteController {
 
 
             } else {
-                $url = explode('/', substr($address_str, strlen(PATH))); // разделить адресную строку на массив строк, разделённых слэшем, начиная после слэша из константы PATH
+
 
                 $hrUrl = $this->routes['user']['hrUrl'];
 
