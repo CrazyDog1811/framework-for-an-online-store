@@ -5,8 +5,11 @@ namespace core\base\controller;
 
 
 use core\base\exceptions\RouteException;
+use core\base\settings\Settings;
 
 abstract class BaseController {
+
+    use \core\base\controller\BaseMethods; // подключить trait
 
     protected $page;
     protected $errors;
@@ -69,7 +72,20 @@ abstract class BaseController {
 
         extract($parameters); // создать в области видимости символьную таблицу из массива $parametres
         if (!$path) {
-            $path = TEMPLATE . explode('controller', strtolower((new \ReflectionClass($this))->getShortName()))[0]; // explode вернёт нулевой элемент массива от слова indexcontroller , разделённого по 'controller', т.е. 'index'
+
+            $class = new \ReflectionClass($this);
+
+            $space = str_replace('\\', '/', $class->getNamespaceName() . '\\'); // Получить пространство имён класса объекта this
+
+            $routes = Settings::get('routes');
+
+            if ($space === $routes['user']['path']) {
+                $template = TEMPLATE;
+            } else {
+                $template = ADMIN_TEMPLATE;
+            }
+
+            $path = $template . explode('controller', strtolower($class->getShortName()))[0]; // explode вернёт нулевой элемент массива от слова indexcontroller , разделённого по 'controller', т.е. 'index'
         }
 
         ob_start(); // открыть буфер обмена

@@ -21,7 +21,7 @@ const ADMIN_CSS_JS = [
 ]; // пути к стилям и скриптам админ.панели
 
 const USER_CSS_JS = [
-    'styles' => [],
+    'styles' => ['css/style.css'],
     'scripts' => []
 ]; // пути к стилям и скриптам пользовательской части
 
