@@ -11,8 +11,9 @@ require_once 'core/base/settings/internal_settings.php';//более фунда�
 use core\base\exceptions\RouteException; // импортируем класс
 use core\base\controller\RouteController;
 
+
 try{
-    RouteController::getInstance() -> route();
+    RouteController::instance() -> route();
 } catch (RouteException $e) {
     exit($e->getMessage());
 }

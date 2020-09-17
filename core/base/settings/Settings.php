@@ -4,9 +4,11 @@
 namespace core\base\settings;
 
 
+use core\base\controller\Singleton;
+
 class Settings {
 
-    static private $_instance;
+    use Singleton;
 
     private $routes = [
        'admin' => [ //доступ к админ. панели
@@ -36,7 +38,7 @@ class Settings {
             'controller' => 'IndexController', // контроллер по умолчанию
             'inputMethod' => 'inputData', // метод, который вызовется по умолчанию
             'outputMethod' => 'outputData' // метод, который по умолчанию отвечает за вывод данных в пользовательскую часть
-        ]
+        ],
     ];
 
     private $templateArr = [
@@ -44,19 +46,8 @@ class Settings {
         'textarea' => ['content', 'keywords']
     ];
 
-    private function __construct() {}
-
-    private function __clone() {}
-
     static public function get($property) { // метод для получения свойств класса singleton
         return self::instance()->$property;
-    }
-
-    static public function instance() {
-        if(self::$_instance instanceof self) {
-            return self::$_instance;
-        }
-        return self::$_instance = new self();
     }
 
     public function clueProperties($class) {

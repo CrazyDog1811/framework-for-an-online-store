@@ -5,24 +5,12 @@ namespace core\base\controller;
 
 use core\base\exceptions\RouteException;
 use core\base\settings\Settings;
-use core\base\settings\ShopSettings;
 
 class RouteController extends BaseController {
-    
-    static private $_instance;
+
+    use Singleton;
 
     protected $routes; // свойство для принятия маршрутов
-
-    private function __clone() {
-
-    }
-
-    static public function getInstance() {
-        if(self::$_instance instanceof self) {
-            return self::$_instance;
-        }
-        return self::$_instance = new self;
-    }
 
     private function __construct() {
 
@@ -38,7 +26,7 @@ class RouteController extends BaseController {
         if ($path === PATH) {
             $this->routes = Settings::get('routes');
 
-            if (!$this->routes) throw new RouteException('the site is under maintenance');
+            if (!$this->routes) throw new RouteException('Отсутствуют маршруты в базовых настройках', 1);
 
             $url = explode('/', substr($address_str, strlen(PATH))); // разделить адресную строку на массив строк, разделённых слэшем, начиная после слэша из константы PATH
 
@@ -121,12 +109,7 @@ class RouteController extends BaseController {
             }
 
         } else {
-
-            try {
-                throw new \Exception('incorrect site directory');
-            } catch (\Exception $e) {
-                exit($e->getMessage());
-            }
+                throw new RouteException('Некорректная директория сайта', 1);
         }
 
     }
