@@ -1,0 +1,13 @@
+Fault: 17-09-2020 16:27:45 - Method core\admin\controller\IndexController::request() does not exist
+file C:\OpenServer\domains\im.my\public_html\core\base\controller\BaseController.php
+in line 42
+\r\nFault: 17-09-2020 16:30:15 - Method core\admin\controller\IndexController::request() does not exist
+file C:\OpenServer\domains\im.my\public_html\core\base\controller\BaseController.php
+in line 42
+\r\nFault: 17-09-2020 16:35:06 - Method core\admin\controller\IndexController::request() does not exist
+file C:\OpenServer\domains\im.my\public_html\core\base\controller\BaseController.php
+in line 42
+\r\nFault: 17-09-2020 16:35:17 - Method core\admin\controller\IndexController::request() does not exist
+file C:\OpenServer\domains\im.my\public_html\core\base\controller\BaseController.php
+in line 42
+\r\n

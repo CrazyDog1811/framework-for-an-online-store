@@ -39,7 +39,7 @@ abstract class BaseController {
             $object->invoke(new $controller, $args);
 
         } catch (\ReflectionException $e) {
-             new RouteException($e->getMessage());
+            throw new RouteException($e->getMessage());
         }
 
     }
