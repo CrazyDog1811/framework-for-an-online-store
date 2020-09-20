@@ -1,0 +1,37 @@
+Fault: 19-09-2020 19:20:32 - *** Error in the SQL-query: SELECT teahers.id, teachers.name, students.id AS st_id, students.name AS st_name
+                  FROM teachers
+                  LEFT JOIN stud_tech ON teachers.id = stud_teach.teachers
+                  LEFT JOIN students ON stud_teach.students = students.id code is - 1146 *** Table 'im.stud_tech' doesn't exist
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 19-09-2020 19:21:18 - *** Error in the SQL-query: SELECT teahers.id, teachers.name, students.id AS st_id, students.name AS st_name
+                  FROM teachers
+                  LEFT JOIN stud_teach ON teachers.id = stud_teach.teachers
+                  LEFT JOIN students ON stud_teach.students = students.id code is - 1054 *** Unknown column 'teahers.id' in 'field list'
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 15:09:39 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers   ORDER BY teachers.id ASC,teachers.name ASC,teachers.content ASC 1 code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 15:10:12 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers   ORDER BY teachers.id ASC,teachers.name ASC,teachers.content ASC 1 code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 15:10:54 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers   ORDER BY teachers.id ASC,teachers.name ASC,teachers.content ASC 1 code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 15:15:34 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers   ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC 1 code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 19:29:21 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname LIKE 'Smirnova%' AND teachers.fio<>'Sergeeva'AND teachers.car='limuzin'AND teachers.color NOT IN ('red','white','black')  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 1054 *** Unknown column 'teachers.surname' in 'where clause'
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 19:29:48 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname LIKE 'Smirnova%' AND teachers.fio<> 'Sergeeva' AND teachers.car= 'limuzin' AND teachers.color NOT IN ('red','white','black')  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 1054 *** Unknown column 'teachers.surname' in 'where clause'
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 19:35:40 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') OR teachers.surname LIKE 'Smirnova%' AND teachers.fio<> 'Sergeeva' AND teachers.car= 'limuzin' AND teachers.color NOT IN ('red','white','black')  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 1054 *** Unknown column 'teachers.surname' in 'where clause'
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 20-09-2020 19:42:39 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname LIKE 'Smirnova%' OR teachers.fio<> 'Sergeeva' OR teachers.car= 'limuzin' OR teachers.color NOT IN ('red','white','black')  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 2006 *** MySQL server has gone away
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\n
