@@ -34,4 +34,55 @@ in line 39
 \r\nFault: 20-09-2020 19:42:39 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname LIKE 'Smirnova%' OR teachers.fio<> 'Sergeeva' OR teachers.car= 'limuzin' OR teachers.color NOT IN ('red','white','black')  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 2006 *** MySQL server has gone away
 file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
 in line 39
+\r\nFault: 25-09-2020 7:37:28 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname LIKE 'Smirnova%' OR teachers.fio<> 'Sergeeva' OR teachers.car= 'limuzin' OR teachers.color NOT IN ('red','white','black')  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 1054 *** Unknown column 'teachers.surname' in 'where clause'
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 01-10-2020 10:09:09 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname LIKE 'Smirnova%' OR teachers.fio<> 'Sergeeva' OR teachers.car= 'limuzin' OR teachers.color NOT IN ('red','white','black')  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 2006 *** MySQL server has gone away
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 01-10-2020 10:13:57 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname NOT IN (SELECT name FROM students WHERE id=1)  ORDER BY teachers.id ASC,teachers.name DESC,teachers.content DESC  code is - 2006 *** MySQL server has gone away
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 01-10-2020 10:21:01 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname<> (SELECT name FROM students WHERE id=1)  ORDER BY 1 DESC,teachers.name DESC 1 code is - 2006 *** MySQL server has gone away
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 01-10-2020 10:27:49 - *** Error in the SQL-query: SELECT teachers.id,teachers.name FROM teachers  WHERE teachers.name IN ('Masha') AND teachers.surname<> (SELECT name FROM students WHERE id=1)  ORDER BY 1 DESC,teachers.name DESC LIMIT 1 code is - 2006 *** MySQL server has gone away
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 39
+\r\nFault: 04-10-2020 10:11:12 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:18:02 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:22:09 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:25:30 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:29:02 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:31:00 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:32:20 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:33:49 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:34:49 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:35:26 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:36:19 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 04-10-2020 10:36:25 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
 \r\n

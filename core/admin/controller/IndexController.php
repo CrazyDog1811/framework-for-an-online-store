@@ -17,18 +17,16 @@ class IndexController extends BaseController
 
         $table = 'teachers';
 
-        $color = ['red', 'white', 'black'];
+        $files['gallery_img'] = ["red''.jpg", 'white.png', 'black.jpg'];
+        $files['img'] = 'main_img.jpg';
 
-        $res = $db->get($table, [
-            'fields' => ['id', 'name'],
-            'where' => ['name' => 'Masha', 'surname' => 'Smirnova', 'fio' => 'Sergeeva', 'car' => 'limuzin', 'color' => $color],
-            'operand' => ['IN', 'LIKE%', '<>', '=', 'NOT IN'],
-            'condition' => ['AND', 'OR'],
-            'order' => ['id', 'name', 'content'],
-            'order_direction' => ['ASC', 'DESC'],
-            'limit' => ''
+        $_POST['name'] = 'Brunkevich';
+
+        $res = $db->add($table, [
+          //  'fields' => ['name' => 'Dazdraperma Kozlyakova', 'content' => 'Hello forever'],
+
         ]);
 
-        exit('I am admin panel');
+        exit('id = ' . $res['id'] . ' name = ' . $res['name']);
     }
 }
