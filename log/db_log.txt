@@ -85,4 +85,16 @@ in line 46
 \r\nFault: 04-10-2020 10:36:25 - *** Error in the SQL-query: INSERT INTO teachers (name, content, gallery_img, img, ) VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'main_img.jpg', ) code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') VALUES ('Olga', 'Hello', '[\"red\'\'.jpg\",\"white.png\",\"black.jpg\"]', 'mai' at line 1
 file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
 in line 46
+\r\nFault: 06-10-2020 16:34:18 - *** Error in the SQL-query: UPDATE teachers SET name=,img= WHERE teachers.id= '1'  code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'img= WHERE teachers.id= '1'' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 06-10-2020 17:26:39 - *** Error in the SQL-query: SHOW COLUMNS FROM teachers code is - 0 *** 
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 06-10-2020 17:31:29 - *** Error in the SQL-query: SHOW COLUMNS FROM teachers code is - 0 *** 
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 08-10-2020 9:43:58 - *** Error in the SQL-query: SHOW COLUMNS FROM  code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
 \r\n

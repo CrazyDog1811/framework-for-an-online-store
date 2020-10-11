@@ -6,6 +6,7 @@ namespace core\admin\controller;
 
 use core\base\controller\BaseController;
 use core\admin\model\Model;
+use core\base\settings\Settings;
 
 class IndexController extends BaseController
 {
@@ -13,20 +14,9 @@ class IndexController extends BaseController
     protected function InputData()
     {
 
-        $db = Model::instance();
+        $redirect = PATH. Settings::get('routes')['admin']['alias'] . '/show';
 
-        $table = 'teachers';
+        $this->redirect($redirect);
 
-        $files['gallery_img'] = ["red''.jpg", 'white.png', 'black.jpg'];
-        $files['img'] = 'main_img.jpg';
-
-        $_POST['name'] = 'Brunkevich';
-
-        $res = $db->add($table, [
-          //  'fields' => ['name' => 'Dazdraperma Kozlyakova', 'content' => 'Hello forever'],
-
-        ]);
-
-        exit('id = ' . $res['id'] . ' name = ' . $res['name']);
     }
 }
