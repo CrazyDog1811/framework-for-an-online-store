@@ -48,6 +48,8 @@ class Settings {
         'textarea' => ['content', 'keywords']
     ];
 
+    private $expansion = 'core/admin/expansion/';
+
     static public function get($property) { // метод для получения свойств класса singleton
         return self::instance()->$property;
     }

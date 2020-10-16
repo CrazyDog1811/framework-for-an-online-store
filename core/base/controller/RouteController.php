@@ -16,14 +16,15 @@ class RouteController extends BaseController {
 
         $address_str = $_SERVER['REQUEST_URI']; // сохраним в переменной строку запроса
 
-        // если строка запроса заканчиается слэшем и это не корень сайта
-        if (strrpos($address_str, '/') === strlen($address_str) - 1 && strrpos($address_str, '/') != 0) {
-            $this->redirect(rtrim($address_str, '/'), 301 ); // перенаправляем по адресу без слэша в конце и возвращаем код ответа 301
-        }
-
         $path = substr($_SERVER['PHP_SELF'], 0, strpos($_SERVER['PHP_SELF'], 'index.php'));
 
         if ($path === PATH) {
+
+            // если строка запроса заканчиается слэшем и это не корень сайта
+            if (strrpos($address_str, '/') === strlen($address_str) - 1 && strrpos($address_str, '/') != strlen(PATH) - 1) {
+                $this->redirect(rtrim($address_str, '/'), 301 ); // перенаправляем по адресу без слэша в конце и возвращаем код ответа 301
+            }
+
             $this->routes = Settings::get('routes');
 
             if (!$this->routes) throw new RouteException('Отсутствуют маршруты в базовых настройках', 1);

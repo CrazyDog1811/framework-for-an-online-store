@@ -97,4 +97,10 @@ in line 46
 \r\nFault: 08-10-2020 9:43:58 - *** Error in the SQL-query: SHOW COLUMNS FROM  code is - 1064 *** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
 in line 46
+\r\nFault: 15-10-2020 16:57:27 - *** Error in the SQL-query: SELECT teachers.id as id,teachers.name,teachers.img,teachers.content,teachers.parent_id FROM teachers   ORDER BY teachers.parent_id ASC,teachers.menu_position ASC  code is - 2006 *** MySQL server has gone away
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 46
+\r\nFault: 15-10-2020 20:34:13 - *** Error in the SQL-query: SHOW COLUMNS FROM teachers code is - 2006 *** MySQL server has gone away
+file C:\OpenServer\domains\im.my\public_html\core\base\model\BaseModel.php
+in line 43
 \r\n
